@@ -8,21 +8,21 @@
   }
   .title {
     font-family: 'Roboto' , sans-serif;
-    color: blue;
+    color: #bb00ff;
   }
 </style>
   <title>
     Aj's Bio
   </title>
-  
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="container" style="background-color: black; color: #bb00ff;">
 <h1 class="title">
   Aj's Bio
 </h1>
 <hr>
-  
+
   <h4 class="therestofthebody">
     Im Aj, I like to play valorant with my friends, i get no bitches, I stream sometimes on twitch, where I live im in college and my dream job is to be an IT engineer. So I along with Thaniel coded these sites for our premier team on valorant. Press the twitch logo at the bottom and find my twitch.
   </h4>
@@ -32,6 +32,26 @@
   </a>
 
   <p style = "color: white;"><pre align = "center"> &copy Ice (and everything nice) 2024 </pre></p>
+
+  <script>
+      (function() {
+          document.addEventListener("mousemove", parallax);
+          const elem = document.querySelector("#container");
+
+          function parallax(e) {
+              let _w = window.innerWidth/2;
+              let _h = window.innerHeight/2;
+              let _mouseX = e.clientX;
+              let _mouseY = e.clientY;
+              let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+              let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+              let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+              let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+              elem.style.backgroundPosition = x;
+          }
+      })();
+  </script>
+  
 </body>
 
 </html>
