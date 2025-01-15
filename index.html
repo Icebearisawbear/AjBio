@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  .therestofthebody {
+    font-family: 'Roboto' , sans-serif;
+  }
+  .title {
+    font-family: 'Roboto' , sans-serif;
+  }
+</style>
+  <title>
+    Aj's Bio
+  </title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="container" style="background-color: black; color: #bb00ff;">
+  <center>
+<h1 style="color: white; letter-spacing: 1px; font-family: 'Roboto', sans-serif;">
+  Aj's Bio
+</h1>
+    </center>
+<hr>
+<!-- Bio itself -->
+  <h4 class="text4">
+    Im Aj, I like to play valorant with my friends, I stream sometimes on twitch, where I live im in college and my dream job is to be an IT engineer. So I along with Thaniel and Rhy coded these sites for our premier team on VALORANT.
+  </h4>
+  <hr>
+<h2>
+  <center>
+    <!-- Twitch -->
+  <a href="https://www.twitch.tv/ionizer_1" target="_blank" class="button" style="font-family: 'Roboto', sans-serif;">
+    Twitch
+  </a>
+</h2>
+  </center>
+  <!-- main menu button -->
+  <h2>
+    <center>
+    <a href="" class="button" style="font-family: 'Roboto', sans-serif;">
+      Return to main menu
+    </a>
+  </h2>
+    </center>
+  <p style="color: #9d9b9b;"><pre align = "center" style="color: #9d9b9b;"> &copy Ice (and everything nice) 2024 </pre></p>
+<!-- paralax error -->
+  <script>
+      (function() {
+          document.addEventListener("mousemove", parallax);
+          const elem = document.querySelector("#container");
+
+          function parallax(e) {
+              let _w = window.innerWidth/2;
+              let _h = window.innerHeight/2;
+              let _mouseX = e.clientX;
+              let _mouseY = e.clientY;
+              let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+              let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+              let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+              let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+              elem.style.backgroundPosition = x;
+          }
+      })();
+  </script>
+  
+</body>
+
+</html>
